@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TabLayoutViewPagerFragment</string>
+    <string name="home_page">首页</string>
+    <string name="find_page">发现</string>
+    <string name="information_page">消息</string>
+    <string name="mine_page">我的</string>
+</resources>
