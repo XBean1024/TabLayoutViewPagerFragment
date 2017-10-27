@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bean.customview.R;
+
 /**
  * auther   : bean
  * on       : 2017/10/27
@@ -14,14 +16,12 @@ import android.view.ViewGroup;
  */
 
 public class InfoFragment extends BaseFragment {
-    /**
-     * fragment 的根视图，用于实例化里面的控件
-     *
-     * @param rootView
-     */
     @Override
-    protected void initView(View rootView) {
-
+    protected View initView(LayoutInflater inflater) {
+        if (mRootView == null) {
+            mRootView = inflater.inflate(R.layout.info_fragment_layout,null);
+        }
+        return mRootView;
     }
 
     /**

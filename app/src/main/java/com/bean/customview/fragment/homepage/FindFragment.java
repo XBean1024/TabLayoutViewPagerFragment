@@ -1,6 +1,9 @@
 package com.bean.customview.fragment.homepage;
 
+import android.view.LayoutInflater;
 import android.view.View;
+
+import com.bean.customview.R;
 
 /**
  * auther   : bean
@@ -12,18 +15,16 @@ import android.view.View;
 
 public class FindFragment extends BaseFragment {
 
-    /**
-     * @param rootView
-     */
     @Override
-    protected void initView(View rootView) {
-        //
+    protected View initView(LayoutInflater inflater) {
+        if (mRootView == null) {
+            mRootView = inflater.inflate(R.layout.find_fragment_layout,null);
+        }
+        return mRootView;
     }
 
     @Override
     protected void bindData() {
 
     }
-
-
 }

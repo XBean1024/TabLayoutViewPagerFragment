@@ -17,17 +17,13 @@ import com.bean.customview.R;
 
 public class HomeFragment extends BaseFragment {
 
-
-    /**
-     * fragment 的根视图，用于实例化里面的控件
-     *
-     * @param rootView
-     */
     @Override
-    protected void initView(View rootView) {
-
+    protected View initView(LayoutInflater inflater) {
+        if (mRootView == null) {
+            mRootView = inflater.inflate(R.layout.home_fragment_layout,null);
+        }
+        return mRootView;
     }
-
     /**
      * 绑定数据
      */

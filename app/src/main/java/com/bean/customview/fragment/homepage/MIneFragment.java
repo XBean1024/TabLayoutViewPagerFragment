@@ -1,6 +1,9 @@
 package com.bean.customview.fragment.homepage;
 
+import android.view.LayoutInflater;
 import android.view.View;
+
+import com.bean.customview.R;
 
 /**
  * auther   : bean
@@ -10,15 +13,13 @@ import android.view.View;
  * function :
  */
 
-public class MIneFragment extends BaseFragment {
-    /**
-     * fragment 的根视图，用于实例化里面的控件
-     *
-     * @param rootView
-     */
+public class MineFragment extends BaseFragment {
     @Override
-    protected void initView(View rootView) {
-
+    protected View initView(LayoutInflater inflater) {
+        if (mRootView == null) {
+            mRootView = inflater.inflate(R.layout.mine_fragment_layout,null);
+        }
+        return mRootView;
     }
 
     /**
